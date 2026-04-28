@@ -27,7 +27,7 @@ export const getFavorites = async (req: Request, res: Response) => {
     const userId = "user123";
 
     try {
-        const favorites = await Favorite.find({ userId });
+        const favorites = await Favorite.find({ userId }).populate("placeId");
         res.status(200).json(favorites);
     } catch (error) {
         res.status(500).json({ message: "Error fetching favorites", error });

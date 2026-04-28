@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import { placeRoutes } from './routes/place.routes';
+import { favoriteRoutes } from './routes/favorite.routes';
 dotenv.config();
 
 const SERVER_PORT = process.env.SERVER_PORT || 5000;
@@ -17,6 +19,9 @@ app.use(
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     })
 );
+
+app.use('/api/places', placeRoutes);
+app.use('/api/favorites', favoriteRoutes);
 
 mongoose
     .connect(MONGO_URI)
