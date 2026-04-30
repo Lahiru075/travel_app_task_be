@@ -65,22 +65,22 @@ src/
 
 To run this project, you will need to add the following variables to your .env file:
 
-* PORT
-* MONGO_URI
-* JWT_SECRET
-* JWT_REFRESH_SECRET
-* CLOUDINARY_CLOUD_NAME
-* CLOUDINARY_API_KEY
-* CLOUDINARY_API_SECRET
+* `PORT`
+* `MONGO_URI`
+* `JWT_SECRET`
+* `JWT_REFRESH_SECRET`
+* `CLOUDINARY_CLOUD_NAME`
+* `CLOUDINARY_API_KEY`
+* `CLOUDINARY_API_SECRET`
 
 ---
 
 ## 🚀 Getting Started
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/Lahiru075/travel_app_task_be.git
-  ```
+   ```bash
+   git clone https://github.com/Lahiru075/travel_app_task_be.git
+   ```
 
 2. Install dependencies:
    ```bash
