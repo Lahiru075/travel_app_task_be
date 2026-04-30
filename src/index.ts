@@ -4,6 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import { placeRoutes } from './routes/place.routes';
 import { favoriteRoutes } from './routes/favorite.routes';
+import { authRoutes } from './routes/auth.routes';
 dotenv.config();
 
 const SERVER_PORT = process.env.SERVER_PORT || 5000;
@@ -22,6 +23,7 @@ app.use(
 
 app.use('/api/places', placeRoutes);
 app.use('/api/favorites', favoriteRoutes);
+app.use('/api/auth', authRoutes);
 
 mongoose
     .connect(MONGO_URI)
