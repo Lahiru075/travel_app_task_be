@@ -40,12 +40,56 @@ src/
 
 ## 📡 API Endpoints
 
-### 🔐 Authentication
+#### 🔐 Authentication
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **POST** | `/api/auth/register` | Register a new user |
+| **POST** | `/api/auth/login` | Authenticate user & return tokens |
+| **POST** | `/api/auth/refresh-token` | Generate new access token using refresh token |
 
-**Method** **Endpoint**	            **Description**
-POST	     `/api/auth/register`	       Register a new user
-POST	     `/api/auth/login`	         Authenticate user & return tokens
-POST	     `/api/auth/refresh-token`	 Generate new access token using refresh token
+#### 🌍 Places & Destinations
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/api/places` | Fetch all travel destinations | **Yes** |
+| **POST** | `/api/places` | Create a new place (with image upload) | **Yes** |
+
+#### ❤️ Favorites (Wishlist)
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :--- |
+| **GET** | `/api/favorites/user` | Fetch logged-in user's favorites | **Yes** |
+| **POST** | `/api/favorites/toggle` | Add/Remove a place from favorites | **Yes** |
 
 ---
 
+## ⚙️ Environment Variables
+
+To run this project, you will need to add the following variables to your .env file:
+
+* PORT
+* MONGO_URI
+* JWT_SECRET
+* JWT_REFRESH_SECRET
+* CLOUDINARY_CLOUD_NAME
+* CLOUDINARY_API_KEY
+* CLOUDINARY_API_SECRET
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/Lahiru075/travel_app_task_be.git
+  ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
